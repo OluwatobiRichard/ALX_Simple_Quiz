@@ -4,25 +4,25 @@ function checkAnswer() {
     const correctAnswer = "4";
 
     // Get the user's selected answer (if any)
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
+    const userAnswer = document.querySelector('input[name="quiz"]:checked'); 
 
     // Element for displaying feedback
     const feedback = document.getElementById('feedback');
 
-    // Check if an answer is selected
+    // Check if the user has selected an answer
     if (userAnswer) {
-        // Compare the user's selected answer's value with the correct answer
+        // Compare the value of the selected answer with the correct answer
         if (userAnswer.value === correctAnswer) {
             feedback.textContent = "Correct! Well done.";
-            feedback.style.color = "green"; // Optional: Change feedback text color
+            feedback.style.color = "green";
         } else {
             feedback.textContent = "That's incorrect. Try again!";
-            feedback.style.color = "red"; // Optional: Change feedback text color
+            feedback.style.color = "red";
         }
     } else {
-        // If no answer is selected
+        // Prompt the user to select an answer if none is selected
         feedback.textContent = "Please select an answer!";
-        feedback.style.color = "orange"; // Optional: Change feedback text color
+        feedback.style.color = "orange";
     }
 }
 
