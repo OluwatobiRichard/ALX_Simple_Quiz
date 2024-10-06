@@ -3,7 +3,7 @@ function checkAnswer() {
     // The correct answer
     const correctAnswer = "4";
 
-    // Get the user's selected answer
+    // Get the user's selected answer (if any)
     const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
     // Element for displaying feedback
@@ -11,7 +11,7 @@ function checkAnswer() {
 
     // Check if an answer is selected
     if (userAnswer) {
-        // Compare user's answer with the correct answer
+        // Compare the user's selected answer's value with the correct answer
         if (userAnswer.value === correctAnswer) {
             feedback.textContent = "Correct! Well done.";
             feedback.style.color = "green"; // Optional: Change feedback text color
@@ -20,7 +20,7 @@ function checkAnswer() {
             feedback.style.color = "red"; // Optional: Change feedback text color
         }
     } else {
-        // No answer selected
+        // If no answer is selected
         feedback.textContent = "Please select an answer!";
         feedback.style.color = "orange"; // Optional: Change feedback text color
     }
